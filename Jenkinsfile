@@ -4,6 +4,7 @@ pipeline {
     stage('Build') {
       steps {
           echo  'runnig build of dev branch'
+           echo 'shubhangi yedi ahe'
       }
     }
   }
