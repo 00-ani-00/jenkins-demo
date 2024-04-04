@@ -6,4 +6,5 @@ pipeline {
           echo  'runnig build of dev branch'
       }
     }
+  }
 }
