@@ -1,9 +1,9 @@
 pipeline{
   agent any
   stages{
-    stage ('echo') {
+    stage ('pull') {
       step {
-        echo  "Hello World this is main branch"
+
       }
     }
   }
