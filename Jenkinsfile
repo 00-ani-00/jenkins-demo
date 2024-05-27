@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent any {
     // tools {
     //     maven 'maven' //install plugin of maven
     //     jdk 'jdk'     //install plugin of java
@@ -16,7 +16,6 @@ pipeline {
             git branch: 'main', url: 'https://github.com/00-ani-00/jenkins-demo.git'
             }
         }
-      }
         stage('build,test and push'){
             steps{
                 script{
@@ -24,8 +23,10 @@ pipeline {
                        sh 'docker build -t anilagad/Node-app .'
                        sh 'docker run -d --name my-cont -p 4000:3000 anilagad/Node-app'
                        sh 'docker push anilagad/Node-app'
-                   }
-                }
-            }
-        }
-    }
+                    }
+                 }
+             }
+         }
+      }
+   }
+}
