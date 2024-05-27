@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     tools {
-        dockerTool 'docker' // Use dockerTool instead of docker
+        dockerTool 'docker' 
     }
     stages {
         stage('Clean Workspace') {
