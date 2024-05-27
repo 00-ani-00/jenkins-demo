@@ -1,5 +1,5 @@
 pipeline{
-  agent anny
+  agent any
   stages{
     stage ('echo') {
       step {
