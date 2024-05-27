@@ -17,7 +17,7 @@ pipeline {
         stage('build,test and push'){
             steps{
                 script{
-                    withDockerRegistry(credentialsId: 'docker', toolName: 'docker'){
+                    withDockerRegistry(credentialsId: 'docker', 'docker', url: 'https://index.docker.io/v1/'){
                        sh 'docker build -t anilagad/Node-app .'
                        sh 'docker run -d --name my-cont -p 4000:3000 anilagad/Node-app'
                        sh 'docker push anilagad/Node-app'
