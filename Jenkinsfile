@@ -1,5 +1,5 @@
 pipeline {
-    agent any {
+    agent any 
     // tools {
     //     maven 'maven' //install plugin of maven
     //     jdk 'jdk'     //install plugin of java
@@ -29,4 +29,3 @@ pipeline {
          }
       }
    }
-}
