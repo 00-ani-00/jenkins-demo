@@ -28,7 +28,7 @@ pipeline {
                 }
             }
         }
-        stage ('Deploy'){
+        stage ('replce-docker-image'){
             steps {
                 script{
                     withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
@@ -44,6 +44,13 @@ pipeline {
                     }
                 }
             }
-       }
-   }
+        }
+        stage ('deploy application'){
+            steps{
+               sh '''
+                docker stack deploy -c docker-compose.yml my-new-stack
+                '''
+            }
+        }
+    }
 }
