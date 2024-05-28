@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   node_app:
-    image: anilagad/node-app:replaceImageTag
+    image: anilagad/node-app:11
     deploy:
       replicas: 3
     ports:
