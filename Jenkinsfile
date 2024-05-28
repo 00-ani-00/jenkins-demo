@@ -48,7 +48,7 @@ pipeline {
         stage ('deploy application'){
             steps{
                sh '''
-                docker stack deploy -c docker-compose.yml my-new-stack
+                docker stack deploy -c test/docker-compose.yml my-new-stack
                 '''
             }
         }
