@@ -2,10 +2,10 @@ version: '3.8'
 
 services:
   node_app:
-    image: anilagad/node
+    image: anilagad/node-app:replaceImageTag
     deploy:
       replicas: 3
     ports:
-      - "3000:3000"
+      - "4000:3000"
     env_file:
       - .env
