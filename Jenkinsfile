@@ -19,7 +19,7 @@ pipeline {
                 script {
                     withDockerRegistry(credentialsId: 'docker', toolName: 'docker') {
                         sh 'docker build -t node-app:${BUILD_NUMBER} test/ '
-                        sh 'docker tag Node-app:${BUILD_NUMBER} anilagad/node-app:${BUILD_NUMBER}'
+                        sh 'docker tag node-app:${BUILD_NUMBER} anilagad/node-app:${BUILD_NUMBER}'
                         sh 'docker run -d --name my-cont -p 4000:3000 anilagad/node-app:${BUILD_NUMBER}'
                         sh 'docker push anilagad/node-app:${BUILD_NUMBER}'
                     }
