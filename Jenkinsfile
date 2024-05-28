@@ -35,7 +35,7 @@ pipeline {
                 sh '''
                 git config user.email "aniketlagad6@gmail.com"
                 git config user.name "00-ani-00"
-                sed -i "s/newtag/${BUILD_NUMBER}/g" test/docker-compose.yml
+                sed -i "s/tag/${BUILD_NUMBER}/g" test/docker-compose.yml
                 git add test/docker-compose.yml
                 git commit -m "Update docker-compose.yml file image to version ${BUILD_NUMBER}"
                 cat test/docker-compose.yml
