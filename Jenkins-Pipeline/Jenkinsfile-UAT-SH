@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+    stages {
+        stage('Run .sh') {
+            when {
+                branch 'Devops-test'
+            }
+            steps {
+                sh 'bash /home/ubuntu/scripts/uat_deploy.sh '
+                echo 'Deploy success'
+            }
+        }
+    }
+}
